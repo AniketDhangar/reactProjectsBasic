@@ -1,0 +1,100 @@
+body {
+  background-image: linear-gradient(to right, #0b0c10, #1f2833);
+}
+.home-main-container {
+  height: 85vh;
+  width: 98vw;
+  text-align: center;
+  color: #45faee;
+}
+.header {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  animation: textAnim 5s infinite;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 70%;
+  height: 2px;
+  background: #45faee;
+}
+
+.header:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header:hover h1 {
+  animation: hoverAnim 0.5s forwards;
+}
+
+@keyframes textAnim {
+  0%,
+  100% {
+    letter-spacing: normal;
+  }
+  50% {
+    letter-spacing: 0.2em;
+  }
+}
+
+@keyframes hoverAnim {
+  0% {
+    letter-spacing: normal;
+  }
+  100% {
+    letter-spacing: 0.3em;
+  }
+}
+
+#hosp-main {
+  height: 60%;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 15px rgb(18, 16, 16);
+}
+.body-container {
+  height: 90%;
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+}
+.img-container,
+.text-container {
+  height: 80%;
+  width: 50%;
+}
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+.text-container {
+  margin: 55px;
+  padding: 30px;
+  text-align: center;
+}
+.text-container h2 {
+  font-size: 50px;
+  text-shadow: -8px -2px 1px rgb(30, 32, 42);
+}
+p {
+  margin-top: 50px;
+  font-size: large;
+}

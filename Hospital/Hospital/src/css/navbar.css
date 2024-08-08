@@ -1,0 +1,75 @@
+.nav-main-container {
+  height: 10vh;
+  width: 100%;
+  background-image: linear-gradient(to right, #0b0c10, #1f2833);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the nav vertically */
+  position: relative;
+}
+
+nav {
+  height: 70%;
+  width: 70%;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* Center the nav items vertically */
+  transition: transform 0.9s ease-in-out; /* Smooth transform transition */
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  transition: font-size 0.9s ease-in-out, transform 0.3s ease-in-out; /* Smooth font-size and transform transition */
+}
+
+
+
+li a {
+  color: #66fcf1;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #66fcf1;
+  transition: width 0.9s ease-in-out; /* Smooth width transition */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+li a:hover::after {
+  width: 100%; /* Underline the link on hover */
+}
+
+.nav-main-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  transform: skewX(-30deg);
+  transform-origin: left;
+  transition: transform 0.9s ease-in-out; /* Smooth transform transition */
+}
+
+.nav-main-container:hover::before {
+  transform: skewX(0deg); /* Remove skew on hover */
+}
